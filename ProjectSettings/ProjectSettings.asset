@@ -140,7 +140,11 @@ PlayerSettings:
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
   bundleVersion: 0.1
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 11400000, guid: c677e5c4eb85b7849a8da406775c299d, type: 2}
+  - {fileID: 6718334851201016215, guid: c471a912fcc44344db57f134a6b4ff13, type: 2}
+  - {fileID: 11400000, guid: 9918e62a6c2630a469664e2be9fd1929, type: 2}
+  - {fileID: -7670282806749222402, guid: efedafd0376327843a2ccf5c9f81f962, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -681,11 +685,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: watson-mr-pdfreader
   metroPackageVersion: 
-  metroCertificatePath: 
+  metroCertificatePath: Assets/WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: DefaultCompany
+  metroCertificateIssuer: DefaultCompany
+  metroCertificateNotAfter: 801f194f4ce2db01
   metroApplicationDescription: watson-mr-pdfreader
   wsaImages: {}
   metroTileShortName: 
