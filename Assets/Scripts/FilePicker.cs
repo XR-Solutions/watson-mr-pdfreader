@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 #if !UNITY_EDITOR && UNITY_WSA_10_0
 using System;
 using System.Threading.Tasks;
