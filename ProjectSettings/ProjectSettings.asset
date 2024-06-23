@@ -689,7 +689,11 @@ PlayerSettings:
   metroCertificatePassword: 
   metroCertificateSubject: DefaultCompany
   metroCertificateIssuer: DefaultCompany
+<<<<<<< HEAD
   metroCertificateNotAfter: 00dfe87366e4db01
+=======
+  metroCertificateNotAfter: 801f194f4ce2db01
+>>>>>>> 6585bcc7378df32dd74d114804a8de7f2320be08
   metroApplicationDescription: watson-mr-pdfreader
   wsaImages: {}
   metroTileShortName: 
