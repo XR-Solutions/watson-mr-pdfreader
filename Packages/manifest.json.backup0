@@ -1,13 +1,4 @@
 {
-  "scopedRegistries": [
-    {
-      "name": "OpenUPM",
-      "url": "https://package.openupm.com",
-      "scopes": [
-        "com.atteneder"
-      ]
-    }
-  ],
   "dependencies": {
     "com.microsoft.mixedreality.openxr": "file:MixedReality/com.microsoft.mixedreality.openxr-1.10.1.tgz",
     "com.microsoft.mrtk.graphicstools.unity": "file:MixedReality/com.microsoft.mrtk.graphicstools.unity-0.7.0.tgz",
@@ -21,7 +12,7 @@
     "com.unity.xr.openxr": "1.10.0",
     "org.mixedrealitytoolkit.accessibility": "file:MixedReality/org.mixedrealitytoolkit.accessibility-1.0.3-pre.20.tgz",
     "org.mixedrealitytoolkit.audio": "file:MixedReality/org.mixedrealitytoolkit.audio-3.0.3.tgz",
-    "org.mixedrealitytoolkit.core": "file:MixedReality/org.mixedrealitytoolkit.core-3.2.0.tgz",
+    "org.mixedrealitytoolkit.core": "file:MixedReality/org.mixedrealitytoolkit.core-3.2.1.tgz",
     "org.mixedrealitytoolkit.diagnostics": "file:MixedReality/org.mixedrealitytoolkit.diagnostics-3.0.2.tgz",
     "org.mixedrealitytoolkit.extendedassets": "file:MixedReality/org.mixedrealitytoolkit.extendedassets-3.0.2.tgz",
     "org.mixedrealitytoolkit.input": "file:MixedReality/org.mixedrealitytoolkit.input-3.2.1.tgz",
@@ -63,8 +54,15 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0",
-    "com.atteneder.gltfast": "6.5.0",
-    "com.microsoft.mixedreality.webview.unity": "file:MixedReality/com.microsoft.mixedreality.webview.unity-0.22.6.tgz",
-    "com.microsoft.mixedreality.input": "file:MixedReality/com.microsoft.mixedreality.input-0.9.2006.tgz"
-  }
+    "com.atteneder.gltfast": "6.5.0"
+  },
+  "scopedRegistries": [
+    {
+      "name": "OpenUPM",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "com.atteneder"
+      ]
+    }
+  ]
 }
