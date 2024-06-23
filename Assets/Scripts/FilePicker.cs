@@ -8,7 +8,7 @@ using Windows.Storage.Pickers;
 
 public class FilePicker : MonoBehaviour
 {
-	public string currentFilePath = string.Empty;
+	public string currentFilePath = "C:\\Users\\roman\\Downloads\\sporenmatrix-2.pdf";
 	// Start is called before the first frame update
 
 	public void SelectFile()

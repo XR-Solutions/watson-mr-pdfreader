@@ -15,7 +15,6 @@ using Windows.Data.Pdf;
 public class PdfViewer : MonoBehaviour
 {
 	[SerializeField] private GameObject PDFPlane = null;
-	[SerializeField] private TextMeshProUGUI text = null;
 	[SerializeField] private FilePicker filePicker = null;
 
 #if !UNITY_EDITOR && UNITY_WSA
@@ -29,15 +28,16 @@ public class PdfViewer : MonoBehaviour
 
 	public void LoadPdf()
 	{
-		Debug.Log("Loading pdf");
+		Debug.Log($"Loading pdf path:'C:\\Users\\roman\\Music\\sporenmatrix-2.pdf'");
+
 #if !UNITY_EDITOR && UNITY_WSA
-		if (!string.IsNullOrEmpty(filePicker.currentFilePath))
+		if (!string.IsNullOrEmpty("C:\\Users\\roman\\Music\\sporenmatrix-2.pdf"))
 		{
-			LoadAsync(filePicker.currentFilePath);
+			LoadAsync("C:\\Users\\roman\\Music\\sporenmatrix-2.pdf");
 		}
 		else
 		{
-			text.text = "No file selected.";
+			Debug.Log($"No file selected");
 		}
 #endif
 	}
@@ -45,16 +45,17 @@ public class PdfViewer : MonoBehaviour
 	private async void LoadAsync(string path)
 	{
 #if !UNITY_EDITOR && UNITY_WSA
-		text.text += "Starting LoadAsync\n";
+		Debug.Log("Starting loadAsync");
 		try
 		{
 			StorageFile sampleFile = await StorageFile.GetFileFromPathAsync(path);
 			pdfDocument = await PdfDocument.LoadFromFileAsync(sampleFile);
-			text.text += "PDF document loaded\n";
+			Debug.Log("Pdf loaded");
 		}
 		catch (Exception e)
 		{
-			text.text += "Error loading PDF document: " + e.Message + "\n";
+			Debug.Log(e);
+			Debug.Log(e.Message);
 		}
 #endif
 	}
@@ -64,13 +65,13 @@ public class PdfViewer : MonoBehaviour
 #if !UNITY_EDITOR && UNITY_WSA
 		if (pdfDocument == null)
 		{
-			text.text += "PDF document is not loaded.\n";
+			Debug.Log("Pdf is not loaded");
 			return;
 		}
 
 		try
 		{
-			text.text += "Starting ChangePageAsync\n";
+			Debug.Log("Starting ChangePageAsync");
 			using (PdfPage pdfPage = pdfDocument.GetPage((uint)pageNumber))
 			{
 				InMemoryRandomAccessStream stream = new InMemoryRandomAccessStream();
@@ -91,12 +92,12 @@ public class PdfViewer : MonoBehaviour
 				mat.SetTexture("_MainTex", imgTex);
 				mat.mainTextureScale = new Vector2(1, 1);
 
-				text.text += "Page loaded and texture applied: " + pageNumber + "\n";
+				Debug.Log( "Page loaded and texture applied: " + pageNumber + "\n");
 			}
 		}
 		catch (Exception e)
 		{
-			text.text += "Error changing page: " + e.Message + "\n";
+			Debug.Log("Error changing page: " + e.Message + "\n");
 		}
 #endif
 	}
